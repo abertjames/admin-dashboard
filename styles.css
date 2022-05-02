@@ -80,7 +80,7 @@ a {
     width: min-content;
 }
 
-img:hover + p{
+#sidebar img:hover + p{
     border-bottom: 2px solid white;
 }
 
@@ -196,11 +196,43 @@ a p:hover{
     font-weight: bold;
 }
 
+.user{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: .5rem;
+}
+
+.image-cropper {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: center;
+
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid black;
+
+}
+
+.profilePhoto {
+    /* border-radius: 50%; */
+    margin-top: 15%;
+    max-width: 100%;
+    height: auto;
+}
+
 .handle{
     font-weight: bold;
 }
 .info{
     color: gray;
+}
+
+.info, .handle {
+    grid-column: 2/3;
+    align-self: center;
 }
 
 #container, #header, #mainContent, #side, #sidebar, #projects, #announcements, #trending, #sidebarContainer {
